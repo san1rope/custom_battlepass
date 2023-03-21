@@ -1,0 +1,9 @@
+name: CustomBP
+version: '1.0-SNAPSHOT'
+main: mc.custombattlepass.org.custombp.CustomBP
+api-version: 1.16
+authors: [ san1rope ]
+description: Custom Battle Pass for minecraft 1.16.5
+softdepend: [PlaceholderAPI]
+commands:
+  pass: { }

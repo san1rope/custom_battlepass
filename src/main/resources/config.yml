@@ -1,0 +1,105 @@
+messages:
+  prefix: "&#449c57 BP | "
+  no_permission: "У вас недостаточно прав!"
+  usage: "Используйте - /pass"
+  console_sender: "Запрещено открывать GUI в консоли!"
+  next_page: "&#449c57Следуйщая страница %player_name%"
+  prev_page: "&#449c57Предыдущая страница %player_name%"
+  task_not_completed: "&#449c57Задание не выполнено!"
+  task_completed: "&#449c57Задание выполнено!"
+  task_completed_message: "Вы выполнили задание!"
+  no_args: "Вы не передали нужные аргументы!"
+  plugin_disabling: "Плагин отключен. Перезагрузите сервер для применения изменений!"
+  wrong_num: "Вводить можно только числа!"
+  wrong_week: "Вы указали неверную неделю!"
+  set_week: "Вы установили {week} неделю!"
+  no_user_found: "Данного пользователя нету!"
+  delete_user_data: "Вы удалили прогресс игрока - {player_name}"
+  delete_user_data_all: "Вы удалили прогресс всех игроков!"
+  menu_title: "BattlePass"
+  plugin_restart: "Плагин перезагружен!"
+
+item_next_page: "head:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTk5YWI0NDFmYzk3ZjYwOTA4MWFkM2NlMzNkNTk4MjkxZDUxYmVmOGNiN2FkMjQ4NGI1YzEzODdjN2E4NCJ9fX0="
+item_prev_page: "head:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYmE2Y2FhMWUxZTlkOWFlZjU5Mjc4NzExNDIyNzg3YTAxNzk5M2M1YjI5MjUxOGM5ZjYzMmQ0MTJmNWE2NTkifX19"
+
+starting_point:
+  year:
+  month:
+  day:
+  hour:
+  minute:
+
+active_week: 1
+
+# Строку temp_week не трогать
+temp_week: 0
+
+# Actions: block_break, pickup_item, kill_entity
+tasks:
+  week_1:
+    ex_1:
+      pre_view:
+        item: "head:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTg0NGU1ZjczY2M0NDY5MDgzMDY1OThhN2NlYWJjOGFjYTU2ZmM0OWMzMzFiZTI3OTcyMzBiY2QwNzA3OGM2In19fQ=="
+        lore:
+          - "§m§e                        "
+          - "§l§m §r§lНаграда за выполнение: 100$§m §r"
+          - "§l§m §r§lДействие: Добыть 10 дуба§m §r"
+          - "§e Доступно к выполнению! "
+      action: "break_block"
+      action_type: "COBBLESTONE"
+      counter: 10
+      dispatch_after_exec:
+        - "[console] time set 0"
+    ex_2:
+      pre_view:
+        item: "COBBLESTONE"
+        lore:
+          - "§m§e                        "
+          - "§l§m §r§lНаграда за выполнение: 100$§m §r"
+          - "§l§m §r§lДействие: Добыть 10 дуба§m §r"
+          - "§e Доступно к выполнению! "
+      action: "pickup_item"
+      action_type: "DIAMOND_SWORD"
+      counter: 10
+      dispatch_after_exec:
+        - "[console] time set 0"
+    ex_3:
+      pre_view:
+        item: "IRON_BLOCK"
+        lore:
+          - "§m§e                        "
+          - "§l§m §r§lНаграда за выполнение: 100$§m §r"
+          - "§l§m §r§lДействие: Добыть 10 дуба§m §r"
+          - "§e Доступно к выполнению! "
+      action: "kill_entity"
+      action_type: "SPIDER"
+      counter: 5
+      dispatch_after_exec:
+        - "[console] time set 0"
+  week_2:
+    ex_1:
+      pre_view:
+        item: "COBBLESTONE"
+        lore:
+          - "§m§e                        "
+          - "§l§m §r§lНаграда за выполнение: 100$§m §r"
+          - "§l§m §r§lДействие: Добыть 10 дуба§m §r"
+          - "§e Доступно к выполнению! "
+      action: "break_block"
+      action_type: "COBBLESTONE"
+      counter: 10
+      dispatch_after_exec:
+        - "[console] time set 0"
+    ex_2:
+      pre_view:
+        item: "IRON_BLOCK"
+        lore:
+          - "§m§e                        "
+          - "§l§m §r§lНаграда за выполнение: 100$§m §r"
+          - "§l§m §r§lДействие: Добыть 10 дуба§m §r"
+          - "§e Доступно к выполнению! "
+      action: "break_block"
+      action_type: "COBBLESTONE"
+      counter: 10
+      dispatch_after_exec:
+        - "[console] time set 0"
