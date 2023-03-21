@@ -222,13 +222,6 @@ public class PassCommand extends AbstractCommand {
             return;
         }
 
-        if (args[0].equalsIgnoreCase("reload")) {
-            CustomBP.getInstance().saveConfig();
-            dbHandler.updateTasks(config);
-            sender.sendMessage(mf.hexToString(config.getString("messages.prefix") + config.getString("messages.plugin_restart")));
-            return;
-        }
-
         sender.sendMessage(mf.hexToString(config.getString("messages.prefix") + config.getString("messages.usage")));
         return;
     }
